@@ -11,19 +11,41 @@ window.addEventListener("scroll",()=>{
 
 
 
-//import Typewriter from 'typewriter-effect';
+// TYPEWRITER CODE
+const texts = ['~ a HTML developer', '~ a CSS developer', '~ a JS developer'];
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
 
-var typewriter = new Typewriter(app, {
-    loop: true,
-    delay: 75,
-  });
-  
-  typewriter
-    .pauseFor(2500)
-    .typeString('A simple yet powerful native javascript')
-    .pauseFor(300)
-    .deleteChars(10)
-    .typeString('<strong>JS</strong> plugin for a cool typewriter effect and ')
-    .typeString('<strong>only <span style="color: #27ae60;">5kb</span> Gzipped!</strong>')
-    .pauseFor(1000)
-    .start();
+(function type() {
+
+    if (count === texts.length) {
+        count = 0;
+    }
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    document.querySelector('.typing').textContent = letter;
+
+    if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+    }
+
+    setTimeout(type, 400);
+
+}());
+
+// localStorege
+
+function store() {
+    var inputName = document.getElementById("name");
+    var inputEmail = document.getElementById("email");
+    var inputMobile = document.getElementById("mobile");
+    var inputComment = document.getElementById("comment");
+    localStorage.setItem("name", inputName.value);
+    localStorage.setItem("email", inputEmail.value);
+    localStorage.setItem("mobile", inputMobile.value);
+    localStorage.setItem("comment", inputComment.value);
+}

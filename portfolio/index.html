@@ -25,10 +25,15 @@
 
     <main>
         <section id="welcome-section" class="main-section">
-            <h1>Hey i'am Abhishek Barnwal.</h1>
-            <p>a html developer</p> <!-- TODO: Make this as typewriter effect - hint(https://github.com/tameemsafi/typewriterjs) -->
+            <h1><strong> i'am Abhishek Barnwal.</strong></h1>
+            <div class="intro">
+                <p class="typing"></p>
+                <!-- <p class="typing">a css developer</p>
+                <p class="typing">a js developer</p> -->
+            </div>
+           <!-- <p>a html developer</p> <!-- TODO: Make this as typewriter effect - hint(https://github.com/tameemsafi/typewriterjs) 
             <p>a css developer</p>
-            <p>a js developer</p>
+            <p>a js developer</p>-->
 
             <!--<div class="type">
                 <h2>a 
@@ -42,8 +47,30 @@
         </section>
 
         <!-- TODO: Introduce a About me section here and the button in nav tag: this section should have your image and a paragraph about you.-->
+        <section id="about-me">
+            <h2>About Me</h2>
+            <img class="my-image" src="/image/mypic.jpg" alt="">
+            <p class="about-tagline">Hello everyone!! <br> I am Abhishek Barnwal, a student of Computer Science and Engineering at Techno Main Salt Lake. I'm from Dhanbad Jharkhand.</p>
+        </section>
 
         <!-- TODO: Introduce a Education section here and the button in nav tag -->
+        <section id="education-section" class="main-section">
+            <h2>Education</h2>
+            <div class="row">
+                <div class="column" style="background-color:#aaa;">
+                    <h3>B.Tech</h3>
+                    <p>Techno India Salt Lake</p>
+                    <p>Session: 2018-2022</p>
+                </div>
+                <div class="column" style="background-color:#bbb;">
+                    <h3>12 <sup>th</sup></h3>
+                    <p>P. K ROY. MEMORIAL COLLEGE, DHANBAD</p>
+                    <p>Session: 2015-2017</p>
+                </div>
+            <div><br></div>
+            </div>
+
+        </section>
 
         <section id="projects" class="main-section">
             <h2>These are some of my projects..</h2>
@@ -73,6 +100,31 @@
         </section>
 
         <!-- TODO: Introduce a contact me form here, (name, email, mobile, reason to contact?) - onclick -> submit, store value in localStorage -->
+        <section id="contact-me">
+            <form id="contact-us-form" method="POST" action="">
+                <fieldset>
+                    <legend><strong>Contact Us</strong></legend>
+                    <div class="label-col">
+                        <br>
+                        <label for="name">Name</label><br><br>
+                        <label for="email">Email</label><br><br>
+                        <label for="mobile">Mobile</label><br><br>
+                        <label for="contact-reason">Reason of contact?</label>
+                    </div>
+
+                    <div class="input-col">
+                        <br>
+                        <input type="text" name="name" id="name" class="stored" value="" placeholder="Enter your name" ><br><br>
+                        <input type="email" name="email" id="email" class="stored" value="" placeholder="Enter your MailID"><br><br>
+                        <input type="number" name="mobile" id="mobile" class="stored" value="" placeholder="Enter your mobile number"><br><br>
+                        <input type="text" name="comment" id="comment" class="stored" value="" placeholder="Enter your query..."> <br>
+                    </div>
+                     <br><input onclick="store()" type="submit" class="submit-button" value="Submit">
+
+                </fieldset>
+            </form>
+            <br>
+        </section>
 
         <section id="contacts" class="main-section">
             <h2>Let's work together...<i class="fab fa-facebook-square"></i></h2>

@@ -26,7 +26,6 @@ body {
   font-size: 32px;
   color: #eee1e1;
   text-decoration: none;
-  opacity: 50%;
   pointer-events: none;
   transition: all .4s;
 }
@@ -34,6 +33,71 @@ body {
   bottom: 32px;
   pointer-events: auto;
   opacity: 1;
+}
+
+  /* The typing effect */
+    
+  .intro {
+    display: flex;
+    margin-left: 580px;
+    text-align: right;
+    font-size: larger;
+    color: rgb(201, 40, 12)152);
+    align-items: center;
+}
+
+.typing {
+    margin-left: 200px;
+    position: relative;
+    font-weight: 400;
+    text-align: right;
+    font-size: larger;
+    color: purple;
+}
+
+.typing::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    width: 1px;
+    height: 90%;
+    border-right: 22px solid rgb(155, 4, 4)62, 153, 153);
+    animation: blink 0.5s infinite ease;
+}
+h1{
+
+}
+.my-image {
+  width: 150px;
+  border-radius: 50%;
+  height: 200px;
+  margin-left: 770px;
+}
+
+#about-me {
+  padding-top: 20px;
+  background-color: blueviolet;
+  color: #eee1e1;
+}
+.row{
+}
+.column{
+  text-align: center;
+}
+
+.about-tagline {
+  margin: auto;
+  width: 500px;
+  text-align: center;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
@@ -192,6 +256,31 @@ h2 {
   }
 }
 
+#contact-me {
+  margin-top: 40px;
+  text-align: center;
+  background-color: rgb(69, 214, 168);
+}
+
+.contact-us-form{
+  color: aquamarine;
+  background-color: aquamarine;
+}
+.label-col {
+  float: left;
+  margin-left: 42rem;
+  text-align: right;
+}
+
+.input-col {
+  margin-left: 1px;
+  margin-right: 38rem;
+}
+
+.submit-button{
+  color: white;
+  background-color: red;
+}
 #contacts {
   display: flex;
   flex-direction: column;
